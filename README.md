@@ -5,14 +5,14 @@ omikhaylov Infra repository
 ```
 root@debian-10-x86-64:~# cat .ssh/config
 Host someinternalhost
-    HostName 10.128.0.32
+    HostName 10.128.0.18
     ProxyCommand ssh -W %h:%p bastion
     User appuser
-    IdentityFIle ~/.ssh/id_rsa_2
+    IdentityFIle ~/.ssh/appuser_sih
 Host bastion
     HostName 51.250.10.79
     User appuser
-    IdentityFIle ~/.ssh/id_rsa
+    IdentityFIle ~/.ssh/appuser
 root@debian-10-x86-64:~# ssh someinternalhost
 Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-124-generic x86_64)
 
